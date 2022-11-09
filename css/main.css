@@ -1,0 +1,372 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+:root{
+    --container-width: 1270px; /*Переменная ширины контейнера */
+    --container-padding: 15px; /*Переменная отступов контейнера */
+    --secondary: rgba(15, 31, 28, 0.5); /*Переменная для цвета текста*/  
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F6F6F6;
+    color: #0F1F1C;
+}
+
+.container{
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.container-right{
+    padding-left: calc((100% - var(--container-width))/2 + var(--container-padding)); /* Контейнер начинается слева также, но уходит вправо до конца*/
+}
+
+/* Header */
+
+.header{
+    position: relative;
+    min-height: 940px;
+    background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434;
+    padding-top: 44px;
+    color: #FFFFFF;
+    overflow: hidden; /* Обрезает все что выхожит за заданный контейнер*/
+    margin-bottom: 96px;
+}
+
+.header a{
+    color: #FFFFFF;
+}
+
+.header::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 96px;
+
+    background-image: url("./../img/header/header-bottom.png");
+    background-size: 100%;
+}
+
+.header__top{
+    margin-bottom: 86px;
+}
+
+.header__row{
+    display: flex;
+}
+
+.header__content{
+    max-width: 592px;
+    position: relative;
+    z-index: 1;
+}
+
+.header__image {
+    position: relative;
+    flex-grow: 1; /*Определяет как много свободного пространства во flex назначено тек.элем*/
+    pointer-events: none;
+}
+
+.header__image img {
+    position: absolute;
+    max-width: none;
+    top: -180px;
+    right: -87px;
+    width: 894px;
+    height: 940px;
+}
+
+/* Navigation*/
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 80px;
+    align-items: center;
+}
+
+
+.nav__list{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav__list ul{
+    display: flex;
+    column-gap: 80px;
+}
+
+.nav__list a{
+    position: relative;
+}
+
+.nav__list a.active::after,
+.nav__list a:hover::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    display: block;
+
+    width: 35px;
+    height: 4px;
+    background-color: #C4C4C4;
+    border-radius: 100px;
+
+}
+
+.nav__login ul{
+    align-items: center;
+    display: flex;
+    column-gap: 25px;
+    font-size: 15px;
+    font-weight: 500;
+
+}
+
+.logo{
+    font-size: 20px;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+/*Navagation Button */
+
+.btn{
+    display: inline-block;
+    padding: 13px 43px;
+    font-size: 15px;
+    color: #FFFFFF;
+
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
+    border-radius: 100px;
+}
+
+/* Header content*/
+
+.header__badge {
+    display: inline-block;
+    padding: 12px 30px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+
+    margin-bottom: 7px;
+}
+
+.header__title {
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 82px;
+    margin-bottom: 30px;
+}
+
+.header__text {
+    font-size: 25px;
+    font-weight: 700;
+    color: rgb(255, 255, 255, 0.5);
+    margin-bottom: 68px;
+
+
+}
+.header_button {
+    display: inline-block;
+    padding: 27px 48px;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+    border-radius: 27px;
+}
+
+/* Destinations */
+
+.destinations {
+    overflow-x: hidden; /*Убирает скролл для того что выходит за пределы экрана*/
+    margin-bottom: 200px;
+}
+
+.container-right {
+}
+
+.destinations__row {
+    display: flex;
+    column-gap: 50px;
+}
+
+.destinations__content {
+    max-width: 496px;
+}
+
+.destinations__slider {
+    width: 1110px;
+    flex-shrink: 0; /*Чтобы блок не сжимался при уменьшении разрешения*/
+}
+
+.destinations__title {
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.destinations__title span{
+    font-size: 30px;
+
+}
+
+.destinations__text {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 38px;
+    color: var(--secondary);
+    margin-bottom: 60px;
+}
+
+.btn-content{
+    display: inline-block;
+    padding: 25px 45px;
+    font-size: 20px;
+    color: #FFFFFF;
+
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
+    border-radius: 27px;
+}
+
+/*Slider */
+.slider {
+    position: relative;
+    height: 456px;
+}
+
+.slider__item {
+    width: 335px;
+    height: 402px;
+    object-fit: cover;
+    border-radius: 35px;
+    margin-top: 27px;
+}
+
+.slider .center .slider__item{
+    margin-top: 0;
+    width: 380px;
+    height: 456px;
+    transition: 0.2s ease-in;
+}
+
+.slider__btn{
+    position: absolute;
+    top: 50%;
+    z-index: 9;
+    transform: translateY(-50%);
+
+    display: block;
+    width: 68px;
+    height: 68px;
+    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #8B8B8B;
+    border-radius: 34px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.slider__btn--prev{
+    left: -27px;
+    padding-left: 26px;
+    justify-content: flex-start;
+}
+
+.slider__btn--next{
+    right: -27px;
+    padding-right: 26px;
+    justify-content: flex-end;
+}
+
+/*Customers*/
+.customers{
+    margin-bottom: 233px;
+}
+
+.customers__row {
+    display: flex;
+    column-gap: 68px;
+}
+.customers__image {
+    max-width: 478px;
+}
+
+.customers__image img{
+    border-radius: 60px;
+}
+
+.customers__content {
+}
+
+.customers__title {
+    font-size: 45px;
+    font-weight: 500px;
+    line-height: 68px;
+    margin-bottom: 35px;
+}
+
+
+.review{
+    max-width: 490px;
+}
+.review__client {
+    display: flex;
+    column-gap: 33px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.review__client-image {
+    width: 134px;
+    height: 134px;
+
+    background: #FF794E;
+    border-radius: 50%;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.review__client-text {
+    
+}
+
+.review__client-text-name {
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    
+}
+
+.review__client-text-country {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 38px;
+    color: var(--secondary);
+}
+
+.review__text {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--secondary);
+    margin-bottom: 30px;
+}
+
+.review__rating {
+}
