@@ -52,6 +52,7 @@ body{
     background-size: 100%;
 }
 
+
 .header__top{
     margin-bottom: 86px;
 }
@@ -66,10 +67,58 @@ body{
     z-index: 1;
 }
 
+
 .header__image {
     position: relative;
     flex-grow: 1; /*Определяет как много свободного пространства во flex назначено тек.элем*/
     pointer-events: none;
+    max-width: 830px;
+ 
+}
+.header__image--element{
+    position: relative;
+    max-width: 830px;
+    height:  615px;
+}
+
+.header__image--element::after,
+.header__image--element::before,
+.header__image::after,
+.header__image::before {
+    position: absolute;
+    content: "";
+}
+
+.header__image::after{
+    width: 170px;
+    height: 50px;
+    top: 54px;
+    right: 30px;
+    background-image: url("./../img/header/el-2.svg");
+}
+
+.header__image::before {
+    width: 48px;
+    height: 63px;
+    top: 0;
+    right: 600px;
+    background-image: url("./../img/header/el-1.svg");
+}
+
+.header__image--element::after{
+    width: 170px;
+    height: 50px;
+    bottom: 0;
+    right: 600px;
+    background-image: url("./../img/header/el-3.svg");
+}
+
+.header__image--element::before{
+    width: 63px;
+    height: 83px;
+    bottom: 0;
+    right: 0;
+    background-image: url("./../img/header/el-4.svg");
 }
 
 .header__image img {
@@ -126,7 +175,6 @@ body{
     column-gap: 25px;
     font-size: 15px;
     font-weight: 500;
-
 }
 
 .logo{
@@ -195,9 +243,6 @@ body{
     margin-bottom: 200px;
 }
 
-.container-right {
-}
-
 .destinations__row {
     display: flex;
     column-gap: 50px;
@@ -242,6 +287,7 @@ body{
 }
 
 /*Slider */
+
 .slider {
     position: relative;
     height: 456px;
@@ -291,7 +337,9 @@ body{
     justify-content: flex-end;
 }
 
+
 /*Customers*/
+
 .customers{
     margin-bottom: 233px;
 }
@@ -368,22 +416,41 @@ body{
 
 /*Prepare*/
 
-.prepare {
+.prepare__content {
+    position: relative;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    max-width: 1240px;
-    max-height: 581px;
-    margin: 0 auto;
 
+    min-height: 581px;
+
+    padding: 40px 15px;
+    text-align: center;
     background: #FFFFFF;
     border-radius: 60px;
     margin-bottom: 135px;
 }
 
-.prepare__description {
-    text-align: center;
-    max-width: 715px;
-    padding: 116px 0;
+.prepare__content::after,
+.prepare__content::before{
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 83px;
+
+}
+
+.prepare__content::before{
+    left: 74px;
+    bottom: 56px;
+    background-image: url("./../img/cta/cta-el-01.svg");
+}
+
+.prepare__content::after{
+    top: 74px;
+    right: 80px;
+    background-image: url("./../img/cta/cta-el-02.svg");
 }
 
 .prepare__title {
