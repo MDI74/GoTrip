@@ -118,7 +118,6 @@ body{
     height: 4px;
     background-color: #C4C4C4;
     border-radius: 100px;
-
 }
 
 .nav__login ul{
@@ -309,20 +308,19 @@ body{
     border-radius: 60px;
 }
 
-.customers__content {
-}
 
 .customers__title {
     font-size: 45px;
-    font-weight: 500px;
+    font-weight: 500;
     line-height: 68px;
     margin-bottom: 35px;
+    max-width: 565px;
 }
-
 
 .review{
-    max-width: 490px;
+    max-width: 491px;
 }
+
 .review__client {
     display: flex;
     column-gap: 33px;
@@ -338,12 +336,8 @@ body{
     border-radius: 50%;
     align-items: center;
     overflow: hidden;
-
 }
 
-.review__client-text {
-    
-}
 
 .review__client-text-name {
     font-weight: 500;
@@ -369,4 +363,38 @@ body{
 }
 
 .review__rating {
+
+}
+
+/*Prepare*/
+
+.prepare {
+    display: flex;
+    justify-content: center;
+    max-width: 1240px;
+    max-height: 581px;
+    margin: 0 auto;
+
+    background: #FFFFFF;
+    border-radius: 60px;
+    margin-bottom: 135px;
+}
+
+.prepare__description {
+    text-align: center;
+    max-width: 715px;
+    padding: 116px 0;
+}
+
+.prepare__title {
+    font-weight: 500;
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+
+.prepare__text {
+    font-weight: 400;
+    font-size: 30px;
+    color: var(--secondary);
+    margin-bottom: 60px;
 }
