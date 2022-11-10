@@ -20,3 +20,15 @@ $('.slider__btn--next').click(function() {
     owl.trigger('next.owl.carousel');
 })
 
+
+
+// Burger menu
+
+const navBurger = document.querySelector('.nav__burger');
+const menuIcon = document.querySelector('.menu-icon');
+
+navBurger.onclick = function(){
+    menuIcon.classList.toggle('menu-icon-active');
+}
+
+
