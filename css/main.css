@@ -67,7 +67,6 @@ body{
     z-index: 1;
 }
 
-
 .header__image {
     position: relative;
     flex-grow: 1; /*Определяет как много свободного пространства во flex назначено тек.элем*/
@@ -75,6 +74,7 @@ body{
     max-width: 830px;
  
 }
+
 .header__image--element{
     position: relative;
     max-width: 830px;
@@ -139,7 +139,6 @@ body{
     align-items: center;
 }
 
-
 .nav__list{
     font-size: 15px;
     font-weight: 500;
@@ -169,12 +168,10 @@ body{
     border-radius: 100px;
 }
 
-
 .nav__list a.active::after,
 .nav__list a:hover::after {
     display: none;
 }
-
 
 .nav__login ul{
     align-items: center;
@@ -191,8 +188,7 @@ body{
 .logo{
     font-size: 20px;
     color: #FFFFFF;
-    font-weight: 700;
-    
+    font-weight: 700; 
 }
 
 .logo a{
@@ -202,8 +198,6 @@ body{
 .logo--footer{
     color: #FF7C4E;
 }
-
-/*Navigation button */
 
 .btn{
     display: inline-block;
@@ -242,17 +236,12 @@ body{
     font-weight: 700;
     color: rgb(255, 255, 255, 0.5);
     margin-bottom: 68px;
-
-
 }
-.header_button {
-    display: inline-block;
-    padding: 27px 48px;
 
-    font-size: 25px;
+.btn--header{
     font-weight: 600;
-
-    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+    font-size: 25px;
+    padding: 27px 48px;
     border-radius: 27px;
 }
 
@@ -296,13 +285,9 @@ body{
     margin-bottom: 60px;
 }
 
-.btn-content{
-    display: inline-block;
+.btn--destinations{
     padding: 25px 45px;
     font-size: 20px;
-    color: #FFFFFF;
-
-    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
     border-radius: 27px;
 }
 
@@ -341,7 +326,6 @@ body{
     border-radius: 34px;
 
     display: flex;
-
     align-items: center;
 }
 
@@ -357,8 +341,7 @@ body{
     justify-content: flex-end;
 }
 
-
-/*Customers*/
+/* Customers */
 
 .customers{
     margin-bottom: 233px;
@@ -368,6 +351,7 @@ body{
     display: flex;
     column-gap: 68px;
 }
+
 .customers__image {
     max-width: 478px;
 }
@@ -375,7 +359,6 @@ body{
 .customers__image img{
     border-radius: 60px;
 }
-
 
 .customers__title {
     font-size: 45px;
@@ -406,13 +389,11 @@ body{
     overflow: hidden;
 }
 
-
 .review__client-text-name {
     font-weight: 500;
     font-size: 33px;
     line-height: 50px;
     margin-bottom: 10px;
-    
 }
 
 .review__client-text-country {
@@ -430,11 +411,10 @@ body{
     margin-bottom: 30px;
 }
 
-.review__rating {
-
-}
-
 /*Prepare*/
+.prepare{
+    margin-bottom: 135px;
+}
 
 .prepare__content {
     position: relative;
@@ -444,12 +424,11 @@ body{
     justify-content: center;
 
     min-height: 581px;
-
     padding: 40px 15px;
+
     text-align: center;
     background: #FFFFFF;
     border-radius: 60px;
-    margin-bottom: 135px;
 }
 
 .prepare__content::after,
@@ -486,12 +465,17 @@ body{
     margin-bottom: 60px;
 }
 
+.btn--prepare{
+    padding: 25px 55px;
+    font-size: 20px;
+    border-radius: 27px;
+}
+
 /* Subscribe */
 
 .subscribe {
     margin-bottom: 106px;
 }
-
 
 .subscribe__content {
     display: flex;
@@ -526,25 +510,20 @@ body{
     color: var(--secondary-text);
 }
 
-.subscribe-from__btn  {
-    display: inline-block;
+.btn--subscribe {
     padding: 34px 87px;
     font-size: 25px;
     font-weight: 600;
-    color: #FFFFFF;
-
-    background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
     border-radius: 35px;
 
 }
 
-
 /* Footer */
+
 .footer{
     margin-bottom: 74px;
 }
 
 .footer a{
     color: var(--secondary-text);
-
 }
