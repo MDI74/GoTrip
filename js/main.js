@@ -1,3 +1,5 @@
+// Owl-carousel
+
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel();
   });
@@ -10,7 +12,7 @@ owl.owlCarousel({
     margin: 30,
     items: 1,
     responsive: {
-        460:{
+        500:{
             items: 3,
         },
         850:{
@@ -30,11 +32,9 @@ $('.slider__btn--prev').click(function() {
     owl.trigger('prev.owl.carousel');
 })
 
-
 $('.slider__btn--next').click(function() {
     owl.trigger('next.owl.carousel');
 })
-
 
 
 // Burger menu
