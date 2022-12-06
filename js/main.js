@@ -84,7 +84,7 @@ popups.forEach(function (item) {
     item.addEventListener('click', function (e) {
         if (!e.target.closest('.popup__content')) {
             item.classList.remove('open');
-            document.body.classList.add('no-scroll');
+            document.body.classList.remove('no-scroll');
         }
     })
 })
