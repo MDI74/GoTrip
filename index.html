@@ -27,8 +27,8 @@
                     </div>
                     <div class="nav__login nav__login--header">
                         <ul>
-                            <li><a href="#" class="active">Sign up</a></li>
-                            <li><a href="#" class ="btn">Login</a></li>    
+                            <li><a href="#" data-popup-btn = 'Sign'>Sign up</a></li>
+                            <li><a href="#" class ="btn" data-popup-btn = 'Login'>Login</a></li>    
                         </ul>   
                     </div>
                     <button class="nav__burger">
@@ -63,8 +63,41 @@
             <img src="./img/header/header-bottom.png" alt="">
         </div>
     </header>
-    <main >
-        <section   class="destinations">
+    <main>
+        <div class="container">
+            <div class="popup" id ='Sign' data-popup>
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <div class="popup__close">X</div>
+                        <h2 class="popup_title">Registration</h2>
+                        <form class='form-registration' action="index.html" name="f1">
+                            <input class="form-registration__input" type="text" placeholder="First Name" name="name1">
+                            <input class="form-registration__input" type="text" placeholder="Last Name: " name="name2">
+                            <input class="form-registration__input" type="email" placeholder="Email" name="email1">
+                            <input class="form-registration__input" type="email" placeholder="Re-Email address:" name="email2">
+                            <input class="form-registration__input" type="password" placeholder="Password:" name="pass1">
+                            <input class="form-registration__input" type="password" placeholder="Re-Password" name="pass2">
+                            <button class="btn btn--form" id="btn-form--reg" type="submit">Registration</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup" id ='Login' data-popup>
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <div class="popup__close">X</div>
+                        <h2 class="popup_title">Login</h2>
+                        <form class='form-registration' action="index.html" name="f2">
+                            <input class="form-registration__input" type="email" placeholder="Email" name="email">
+                            <input class="form-registration__input" type="password" placeholder="Password:" name="pass">
+                            <button class="btn btn--form" id="btn-form--login" type="submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section  class="destinations">
             <div class="container-right">
                 <div class="destinations__row">
                     <div class="destinations__content">
